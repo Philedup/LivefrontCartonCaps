@@ -149,5 +149,5 @@ LivefrontCartonCaps/
 
 ## Contact
 
-Created by [Phil Phan](mailto:me@philphan.com)  
+Created by [Phil Phan](mailto:philedup@yahoo.com)  
 Livefront Project Candidate
