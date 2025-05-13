@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivefrontCartonCaps", "LivefrontCartonCaps.csproj", "{BC5518E9-953A-465A-A901-879DC3027B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivefrontCartonCaps.Test", "..\..\..\..\..\Source\LiveFrontCartonCapsCodeProject\LivefrontCartonCaps.Test\LivefrontCartonCaps.Test.csproj", "{4C3A4B52-B02C-4E94-BF4E-D2DF751EE394}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC5518E9-953A-465A-A901-879DC3027B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5518E9-953A-465A-A901-879DC3027B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5518E9-953A-465A-A901-879DC3027B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5518E9-953A-465A-A901-879DC3027B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C3A4B52-B02C-4E94-BF4E-D2DF751EE394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C3A4B52-B02C-4E94-BF4E-D2DF751EE394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C3A4B52-B02C-4E94-BF4E-D2DF751EE394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C3A4B52-B02C-4E94-BF4E-D2DF751EE394}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE94FF2F-D047-4FCA-81D0-714993E77080}
+	EndGlobalSection
+EndGlobal
