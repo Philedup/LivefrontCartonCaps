@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivefrontCartonCaps", "LivefrontCartonCaps.csproj", "{BC5518E9-953A-465A-A901-879DC3027B87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivefrontCartonCaps.Test", "..\..\..\..\..\Source\LiveFrontCartonCapsCodeProject\LivefrontCartonCaps.Test\LivefrontCartonCaps.Test.csproj", "{4C3A4B52-B02C-4E94-BF4E-D2DF751EE394}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivefrontCartonCaps.Test", "LivefrontCartonCaps.Test\LivefrontCartonCaps.Test.csproj", "{4C3A4B52-B02C-4E94-BF4E-D2DF751EE394}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
