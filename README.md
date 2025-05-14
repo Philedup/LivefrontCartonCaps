@@ -43,13 +43,18 @@ This project is a mock REST API built in .NET Core to support a new referral fea
 |--------|---------------------------|------------------------------------------------------|
 | GET    | `/api/referrals/page`     | Returns referral code, link, and share content       |
 | GET    | `/api/referrals/history`  | Lists users referred by the current user             |
-| POST   | `/api/referrals/track`    | Reserved for click tracking                          |
+| POST   | `/api/referrals/track`    | Reserved for referral link tracking                  |
 | POST   | `/api/registration`       | Registers a new user and optionally redeems referral |
 
 - Includes XML summaries for models and endpoints
-- Status code examples: `200`, `400`, `404`, `409`, `500`
-- Reusable response wrapper: `ApiResponse<T>`
-- Custom examples via `SwaggerResponseExample`
+- Fully documented **success and error responses**, including sample payloads for:
+  - `200 OK`
+  - `400 Bad Request`
+  - `404 Not Found`
+  - `409 Conflict`
+  - `500 Internal Server Error`
+- Uses a consistent, reusable `ApiResponse<T>` wrapper
+- Enhanced Swagger UI examples via `SwaggerResponseExample`
 
 ---
 
@@ -76,7 +81,7 @@ Although not required, additional endpoints and tooling were implemented to demo
 - **Swagger Examples**  
   - Preconfigured Swagger examples for each response type, including failures
 
-- **Deep Linking Simulation**  
+- **Referral Link Tracking Simulation**  
   - The API embeds referral codes as query parameters in generated links (e.g., `?referral_code=PLP1013&method=sms`)
   - Assumes deferred deep link behavior is handled externally by a service like Firebase Dynamic Links or Branch.io
   - The app would extract and redeem the referral code during onboarding
