@@ -96,14 +96,14 @@ namespace LivefrontCartonCaps.Controllers
         /// Currently a placeholder endpoint for potential in-house tracking.
         /// </summary>
         /// <param name="model">Click tracking details.</param>
-        /// <returns>202 Accepted response.</returns>
+        /// <returns>200 OK if tracking was accepted, 400 Bad Request if input is invalid.</returns>
         [HttpPost("track")]
-        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        [ProducesResponseType(typeof(ApiResponse<TrackReferralResultModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
-        [SwaggerRequestExample(typeof(ReferralClickTrackModel), typeof(TrackReferralSuccessExample))]
+        [SwaggerRequestExample(typeof(TrackReferralResultModel), typeof(TrackReferralSuccessExample))]
+        [SwaggerResponseExample(StatusCodes.Status200OK, typeof(TrackReferralSuccessExample))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(TrackReferralBadRequestExample))]
-
-        public IActionResult TrackReferralClick([FromBody] ReferralClickTrackModel model)
+        public IActionResult TrackReferralClick([FromBody] TrackReferralResultModel model)
         {
             if (string.IsNullOrWhiteSpace(model.ReferralCode))
             {
@@ -115,7 +115,7 @@ namespace LivefrontCartonCaps.Controllers
                 model.ReferralCode, model.Method, model.DeviceId, model.IpAddress, model.Timestamp);
 
             // Placeholder for future logic
-            return Accepted();
+            return Ok(ApiResponse<TrackReferralResultModel>.Ok(model));
         }
 
     }

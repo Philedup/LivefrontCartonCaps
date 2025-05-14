@@ -92,10 +92,10 @@ public class ReferralsControllerTests
     }
 
     [Fact]
-    public void TrackReferralClick_ReturnsAccepted_WhenValidModel()
+    public void TrackReferralClick_ReturnsOk_WhenValidModel()
     {
         var controller = CreateController();
-        var model = new ReferralClickTrackModel
+        var model = new TrackReferralResultModel
         {
             ReferralCode = "ABC123",
             Method = "sms",
@@ -105,15 +105,19 @@ public class ReferralsControllerTests
 
         var result = controller.TrackReferralClick(model);
 
-        var accepted = Assert.IsType<AcceptedResult>(result);
-        Assert.Equal(202, accepted.StatusCode);
+        var okResult = Assert.IsType<OkObjectResult>(result);
+        Assert.Equal(200, okResult.StatusCode);
+
+        var apiResponse = Assert.IsType<ApiResponse<TrackReferralResultModel>>(okResult.Value);
+        Assert.True(apiResponse.Success);
+        Assert.Equal("ABC123", apiResponse.Data?.ReferralCode);
     }
 
     [Fact]
     public void TrackReferralClick_ReturnsBadRequest_WhenReferralCodeMissing()
     {
         var controller = CreateController();
-        var model = new ReferralClickTrackModel { ReferralCode = "" };
+        var model = new TrackReferralResultModel { ReferralCode = "" };
 
         var result = controller.TrackReferralClick(model);
 

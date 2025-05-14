@@ -10,7 +10,7 @@ namespace LivefrontCartonCaps.MockData
         private readonly List<UserReferral> _referrals = new()
         {
             new() { ReferrerUserId = "user1", ReferredUserId = "user3", Status = "Pending" },
-            new() { ReferrerUserId = "user1", ReferredUserId = "user6", Status = "Accepted" }
+            new() { ReferrerUserId = "user1", ReferredUserId = "user6", Status = "Complete" }
         };
 
         /// <summary>
