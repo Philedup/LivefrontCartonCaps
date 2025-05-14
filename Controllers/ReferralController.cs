@@ -99,7 +99,7 @@ namespace LivefrontCartonCaps.Controllers
         /// <returns>200 OK if tracking was accepted, 400 Bad Request if input is invalid.</returns>
         [HttpPost("track")]
         [ProducesResponseType(typeof(ApiResponse<TrackReferralResultModel>), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ApiResponse<TrackReferralResultModel>), StatusCodes.Status400BadRequest)]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(TrackReferralSuccessExample))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(TrackReferralBadRequestExample))]
         public IActionResult TrackReferralClick([FromBody] TrackReferralResultModel model)
