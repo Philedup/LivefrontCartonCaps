@@ -100,7 +100,6 @@ namespace LivefrontCartonCaps.Controllers
         [HttpPost("track")]
         [ProducesResponseType(typeof(ApiResponse<TrackReferralResultModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
-        [SwaggerRequestExample(typeof(TrackReferralResultModel), typeof(TrackReferralSuccessExample))]
         [SwaggerResponseExample(StatusCodes.Status200OK, typeof(TrackReferralSuccessExample))]
         [SwaggerResponseExample(StatusCodes.Status400BadRequest, typeof(TrackReferralBadRequestExample))]
         public IActionResult TrackReferralClick([FromBody] TrackReferralResultModel model)
