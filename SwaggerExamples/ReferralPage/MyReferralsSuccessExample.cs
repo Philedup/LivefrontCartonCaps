@@ -24,7 +24,7 @@ namespace LivefrontCartonCaps.SwaggerExamples.ReferralPage
                     Referrals = new List<ReferralsModel>
                     {
                         new ReferralsModel { Name = "Adam May", Status = "Pending" },
-                        new ReferralsModel { Name = "Steve Horn", Status = "Accepted" }
+                        new ReferralsModel { Name = "Steve Horn", Status = "Complete" }
                     }
                 },
                 Errors = new List<string>()
